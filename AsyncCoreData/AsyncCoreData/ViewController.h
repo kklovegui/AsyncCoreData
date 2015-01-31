@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataStore.h"
 
 @interface ViewController : UIViewController
 
