@@ -11,11 +11,12 @@
 
 @interface DataStore : NSObject
 
-@property(readonly, strong, nonatomic)NSManagedObjectContext *managedObjectContext;
+@property(readonly, strong, nonatomic)NSManagedObjectContext *temporaryContext;
 @property(readonly, strong, nonatomic)NSManagedObjectModel *managedObjectModel;
 @property(readonly, strong, nonatomic)NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 + (id)shareInstance;
 - (void)saveContext;
+- (NSURL *)documentsDirectory;
 
 @end

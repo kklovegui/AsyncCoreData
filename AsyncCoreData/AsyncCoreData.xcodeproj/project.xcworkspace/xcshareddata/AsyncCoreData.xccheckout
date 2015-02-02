@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C4D1990F-DAFA-45C4-A02D-293244B860E9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AsyncCoreData</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D60E32CC01F6C0B1DEFB9272E3A0A9F438D1B11B</key>
+		<string>https://github.com/kklovegui/AsyncCoreData.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AsyncCoreData/AsyncCoreData.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D60E32CC01F6C0B1DEFB9272E3A0A9F438D1B11B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kklovegui/AsyncCoreData.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D60E32CC01F6C0B1DEFB9272E3A0A9F438D1B11B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D60E32CC01F6C0B1DEFB9272E3A0A9F438D1B11B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AsyncCoreData</string>
+		</dict>
+	</array>
+</dict>
+</plist>

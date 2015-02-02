@@ -8,9 +8,12 @@
 
 #import "DataStore.h"
 
-@implementation DataStore
+@implementation DataStore{
+    NSManagedObjectContext *mainManagedObjectContext;
+    NSManagedObjectContext *bgManagedObjectContext;
+}
 
-@synthesize managedObjectContext = _managedObjectContext;
+@synthesize temporaryContext = _temporaryContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
@@ -25,7 +28,10 @@
 }
 
 - (NSURL *)documentsDirectory{
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentationDirectory inDomains:NSUserDomainMask] firstObject];
+    NSLog(@"3333");
+    NSLog(@"%@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
+    NSLog(@"4444");
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 - (NSManagedObjectModel *)managedObjectModel{
@@ -60,24 +66,43 @@
     return _persistentStoreCoordinator;
 }
 
-- (NSManagedObjectContext *)managedObjectContext
+- (NSManagedObjectContext *)mainManagedObjectContext
 {
-    if (_managedObjectContext != nil) {
-        return _managedObjectContext;
+    if (mainManagedObjectContext != nil) {
+        return mainManagedObjectContext;
     }
     
+    mainManagedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    [mainManagedObjectContext setParentContext:self.bgManagedObjectContext];
+    
+    return mainManagedObjectContext;
+}
+
+- (NSManagedObjectContext *)bgManagedObjectContext
+{
+    if (bgManagedObjectContext != nil) {
+        return bgManagedObjectContext;
+    }
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator == nil) {
-        return nil;
+        abort();
     }
-    _managedObjectContext = [[NSManagedObjectContext alloc] init];
-    [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-    return _managedObjectContext;
+    bgManagedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    [bgManagedObjectContext setPersistentStoreCoordinator:coordinator];
+    
+    return bgManagedObjectContext;
+}
+
+- (NSManagedObjectContext *)temporaryContext
+{
+    NSManagedObjectContext *temporaryContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    temporaryContext.parentContext = [self mainManagedObjectContext];
+    return temporaryContext;
 }
 
 - (void)saveContext
 {
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    NSManagedObjectContext *managedObjectContext = self.mainManagedObjectContext;
     if (managedObjectContext != nil) {
         NSError *error = nil;
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {

@@ -17,6 +17,8 @@
 		7FB3E3F51A7D09B5005DC2E7 /* AsyncCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E3F41A7D09B5005DC2E7 /* AsyncCoreDataTests.m */; };
 		7FB3E4051A7D0B67005DC2E7 /* Libs in Resources */ = {isa = PBXBuildFile; fileRef = 7FB3E4041A7D0B67005DC2E7 /* Libs */; };
 		7FB3E4171A7D0E26005DC2E7 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E4151A7D0E26005DC2E7 /* DataStore.m */; };
+		7FB3E4581A7D3A93005DC2E7 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E4571A7D3A93005DC2E7 /* Student.m */; };
+		7FF79E6C1A7E60DC00AABF4D /* DataCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF79E6B1A7E60DC00AABF4D /* DataCoreTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		7FB3E4041A7D0B67005DC2E7 /* Libs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Libs; sourceTree = "<group>"; };
 		7FB3E4141A7D0E26005DC2E7 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
 		7FB3E4151A7D0E26005DC2E7 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
+		7FB3E4561A7D3A93005DC2E7 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		7FB3E4571A7D3A93005DC2E7 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		7FF79E6B1A7E60DC00AABF4D /* DataCoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCoreTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,7 @@
 		7FB3E3F11A7D09B5005DC2E7 /* AsyncCoreDataTests */ = {
 			isa = PBXGroup;
 			children = (
+				7FF79E6B1A7E60DC00AABF4D /* DataCoreTests.m */,
 				7FB3E3F41A7D09B5005DC2E7 /* AsyncCoreDataTests.m */,
 				7FB3E3F21A7D09B5005DC2E7 /* Supporting Files */,
 			);
@@ -132,6 +138,8 @@
 		7FB3E4111A7D0E26005DC2E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7FB3E4561A7D3A93005DC2E7 /* Student.h */,
+				7FB3E4571A7D3A93005DC2E7 /* Student.m */,
 				7FB3E4141A7D0E26005DC2E7 /* DataStore.h */,
 				7FB3E4151A7D0E26005DC2E7 /* DataStore.m */,
 			);
@@ -244,6 +252,7 @@
 				7FB3E3E11A7D09B5005DC2E7 /* ViewController.m in Sources */,
 				7FB3E3DE1A7D09B5005DC2E7 /* AsyncCoreData.xcdatamodeld in Sources */,
 				7FB3E4171A7D0E26005DC2E7 /* DataStore.m in Sources */,
+				7FB3E4581A7D3A93005DC2E7 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF79E6C1A7E60DC00AABF4D /* DataCoreTests.m in Sources */,
 				7FB3E3F51A7D09B5005DC2E7 /* AsyncCoreDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +444,7 @@
 				7FB3E3FA1A7D09B5005DC2E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FB3E3FB1A7D09B5005DC2E7 /* Build configuration list for PBXNativeTarget "AsyncCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +453,7 @@
 				7FB3E3FD1A7D09B5005DC2E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
