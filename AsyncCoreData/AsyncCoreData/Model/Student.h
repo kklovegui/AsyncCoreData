@@ -17,6 +17,4 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * stu_id;
 
-+ (Student *)userWithUniqueId:(NSNumber *)uniqueID;
-
 @end

@@ -28,9 +28,7 @@
 }
 
 - (NSURL *)documentsDirectory{
-    NSLog(@"3333");
     NSLog(@"%@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
-    NSLog(@"4444");
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
