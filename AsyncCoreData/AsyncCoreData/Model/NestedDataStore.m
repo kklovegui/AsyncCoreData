@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 xiaofei. All rights reserved.
 //
 
-#import "DataStore.h"
+#import "NestedDataStore.h"
 
-@implementation DataStore{
+@implementation NestedDataStore{
     NSManagedObjectContext *mainManagedObjectContext;
     NSManagedObjectContext *bgManagedObjectContext;
 }
@@ -19,12 +19,12 @@
 
 + (id)shareInstance
 {
-    static DataStore *dataStore;
+    static NestedDataStore *nestedDataStore;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        dataStore = [[DataStore alloc] init];
+        nestedDataStore = [[NestedDataStore alloc] init];
     });
-    return dataStore;
+    return nestedDataStore;
 }
 
 - (NSURL *)documentsDirectory{

@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "DataStore.h"
+#import "NestedDataStore.h"
 #import "Student.h"
 
 @interface DataCoreTests : XCTestCase{
-    DataStore *dataStore;
+    NestedDataStore *nestedDataStore;
 }
 
 @end
@@ -21,7 +21,7 @@
 
 - (void)setUp {
     [super setUp];
-    dataStore = [DataStore shareInstance];
+    nestedDataStore = [NestedDataStore shareInstance];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -44,10 +44,10 @@
 
 - (void)testInsert
 {
-    NSManagedObjectContext * context = [dataStore managedObjectContext];
+    NSManagedObjectContext * context = [nestedDataStore temporaryContext];
     NSManagedObject        * student  = nil;
     
-    [dataStore documentsDirectory];
+    [nestedDataStore documentsDirectory];
     
     student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext: context];
     [student setValue:@1 forKey: @"stu_id"];
@@ -58,7 +58,7 @@
 - (void)testUpdate
 {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSManagedObjectContext * context = [dataStore managedObjectContext];
+    NSManagedObjectContext * context = [nestedDataStore temporaryContext];
     [request setEntity:[NSEntityDescription entityForName:@"Student" inManagedObjectContext:context]];
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"stu_id == %@", @1];
@@ -72,7 +72,7 @@
 
 - (void)testFetchData
 {
-    NSManagedObjectContext * context = [dataStore managedObjectContext];
+    NSManagedObjectContext * context = [nestedDataStore temporaryContext];
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Student"];
     NSError *error = nil;

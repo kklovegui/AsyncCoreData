@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface DataStore : NSObject
+@interface NestedDataStore : NSObject
 
 @property(readonly, strong, nonatomic)NSManagedObjectContext *temporaryContext;
 @property(readonly, strong, nonatomic)NSManagedObjectModel *managedObjectModel;

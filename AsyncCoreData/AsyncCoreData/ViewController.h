@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DataStore.h"
+#import "NestedDataStore.h"
 
 @interface ViewController : UIViewController
 
