@@ -18,6 +18,7 @@
 		7FB3E4051A7D0B67005DC2E7 /* Libs in Resources */ = {isa = PBXBuildFile; fileRef = 7FB3E4041A7D0B67005DC2E7 /* Libs */; };
 		7FB3E4171A7D0E26005DC2E7 /* NestedDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E4151A7D0E26005DC2E7 /* NestedDataStore.m */; };
 		7FB3E4581A7D3A93005DC2E7 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E4571A7D3A93005DC2E7 /* Student.m */; };
+		7FDBB2C31A82403600BE3CBF /* NestedDataStore+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDBB2C21A82403600BE3CBF /* NestedDataStore+Help.m */; };
 		7FF79E6C1A7E60DC00AABF4D /* DataCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF79E6B1A7E60DC00AABF4D /* DataCoreTests.m */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 		7FB3E4151A7D0E26005DC2E7 /* NestedDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestedDataStore.m; sourceTree = "<group>"; };
 		7FB3E4561A7D3A93005DC2E7 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		7FB3E4571A7D3A93005DC2E7 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		7FDBB2C11A82403600BE3CBF /* NestedDataStore+Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NestedDataStore+Help.h"; sourceTree = "<group>"; };
+		7FDBB2C21A82403600BE3CBF /* NestedDataStore+Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NestedDataStore+Help.m"; sourceTree = "<group>"; };
 		7FF79E6B1A7E60DC00AABF4D /* DataCoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCoreTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +145,8 @@
 				7FB3E4571A7D3A93005DC2E7 /* Student.m */,
 				7FB3E4141A7D0E26005DC2E7 /* NestedDataStore.h */,
 				7FB3E4151A7D0E26005DC2E7 /* NestedDataStore.m */,
+				7FDBB2C11A82403600BE3CBF /* NestedDataStore+Help.h */,
+				7FDBB2C21A82403600BE3CBF /* NestedDataStore+Help.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDBB2C31A82403600BE3CBF /* NestedDataStore+Help.m in Sources */,
 				7FB3E3DB1A7D09B5005DC2E7 /* AppDelegate.m in Sources */,
 				7FB3E3D81A7D09B5005DC2E7 /* main.m in Sources */,
 				7FB3E3E11A7D09B5005DC2E7 /* ViewController.m in Sources */,

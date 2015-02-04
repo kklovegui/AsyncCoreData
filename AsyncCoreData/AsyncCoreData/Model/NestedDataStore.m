@@ -7,6 +7,9 @@
 //
 
 #import "NestedDataStore.h"
+#import <objc/runtime.h>
+
+static void *temporaryContextKey;
 
 @implementation NestedDataStore{
     NSManagedObjectContext *mainManagedObjectContext;
@@ -93,9 +96,14 @@
 
 - (NSManagedObjectContext *)temporaryContext
 {
-    NSManagedObjectContext *temporaryContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    temporaryContext.parentContext = [self mainManagedObjectContext];
-    return temporaryContext;
+    if (_temporaryContext != nil) {
+        return _temporaryContext;
+    }
+    
+    _temporaryContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    _temporaryContext.parentContext = [self mainManagedObjectContext];
+    
+    return _temporaryContext;
 }
 
 - (void)saveContext

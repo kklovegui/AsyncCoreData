@@ -16,4 +16,5 @@
 @dynamic name;
 @dynamic stu_id;
 
+
 @end
