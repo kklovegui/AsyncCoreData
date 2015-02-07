@@ -19,6 +19,7 @@
 		7FB3E4171A7D0E26005DC2E7 /* NestedDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E4151A7D0E26005DC2E7 /* NestedDataStore.m */; };
 		7FB3E4581A7D3A93005DC2E7 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E4571A7D3A93005DC2E7 /* Student.m */; };
 		7FDBB2C31A82403600BE3CBF /* NestedDataStore+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDBB2C21A82403600BE3CBF /* NestedDataStore+Help.m */; };
+		7FE1FE481A863922002E5A3A /* NSDictionary+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE1FE471A863922002E5A3A /* NSDictionary+Parse.m */; };
 		7FF79E6C1A7E60DC00AABF4D /* DataCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF79E6B1A7E60DC00AABF4D /* DataCoreTests.m */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		7FB3E4571A7D3A93005DC2E7 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		7FDBB2C11A82403600BE3CBF /* NestedDataStore+Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NestedDataStore+Help.h"; sourceTree = "<group>"; };
 		7FDBB2C21A82403600BE3CBF /* NestedDataStore+Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NestedDataStore+Help.m"; sourceTree = "<group>"; };
+		7FE1FE461A863922002E5A3A /* NSDictionary+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Parse.h"; sourceTree = "<group>"; };
+		7FE1FE471A863922002E5A3A /* NSDictionary+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Parse.m"; sourceTree = "<group>"; };
 		7FF79E6B1A7E60DC00AABF4D /* DataCoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCoreTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +150,8 @@
 				7FB3E4151A7D0E26005DC2E7 /* NestedDataStore.m */,
 				7FDBB2C11A82403600BE3CBF /* NestedDataStore+Help.h */,
 				7FDBB2C21A82403600BE3CBF /* NestedDataStore+Help.m */,
+				7FE1FE461A863922002E5A3A /* NSDictionary+Parse.h */,
+				7FE1FE471A863922002E5A3A /* NSDictionary+Parse.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				7FB3E3DB1A7D09B5005DC2E7 /* AppDelegate.m in Sources */,
 				7FB3E3D81A7D09B5005DC2E7 /* main.m in Sources */,
 				7FB3E3E11A7D09B5005DC2E7 /* ViewController.m in Sources */,
+				7FE1FE481A863922002E5A3A /* NSDictionary+Parse.m in Sources */,
 				7FB3E3DE1A7D09B5005DC2E7 /* AsyncCoreData.xcdatamodeld in Sources */,
 				7FB3E4171A7D0E26005DC2E7 /* NestedDataStore.m in Sources */,
 				7FB3E4581A7D3A93005DC2E7 /* Student.m in Sources */,

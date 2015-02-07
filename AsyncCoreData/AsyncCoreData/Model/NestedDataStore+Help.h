@@ -8,11 +8,13 @@
 
 #import "NestedDataStore.h"
 
-typedef void(^Result)(NSArray* result, NSError *error);
+typedef void(^CallBackBlock)(NSArray* result, NSError *error);
 
 @interface NestedDataStore (Help)
 
 - (void)add:(NSDictionary *)dict;
-- (void)update:(NSDictionary *)dict with:(NSPredicate *)predicate result:(Result)block;
+- (void)update:(NSDictionary *)dict with:(NSPredicate *)predicate result:(CallBackBlock)block;
+
+
 
 @end

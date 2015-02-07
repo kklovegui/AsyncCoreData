@@ -8,19 +8,19 @@
 
 #import "NestedDataStore+Help.h"
 #import "Student.h"
+#import "NSDictionary+Parse.h"
 #import <objc/runtime.h>
 
 @implementation NestedDataStore (Help)
-
-static void *MyClassResultKey;
 
 - (void)add:(NSDictionary *)dict
 {
     Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:self.temporaryContext];
     [self fetch:dict to:student];
+    [self saveContext];
 }
 
-- (void)update:(NSDictionary *)dict with:(NSPredicate *)predicate result:(Result)block
+- (void)update:(NSDictionary *)dict with:(NSPredicate *)predicate result:(CallBackBlock)block
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Student"];
     [request setPredicate:predicate];
@@ -28,21 +28,18 @@ static void *MyClassResultKey;
     NSError *error = nil;
     NSArray *results = [self.temporaryContext executeFetchRequest:request error:&error];
     
-    block(results, error);
-//    if ([results count] != 1) {
-//        return NO;
-//    }
-//    
-//    Student *student = results[0];
-//    [self fetch:dict to:student];
-//    return YES;
+    if (error == nil)  {
+        block(results, nil);
+        return;
+    }
+    block(nil, error);
 }
 
 - (void)fetch:(NSDictionary *)dict to:(Student *)stu
 {
-    NSString *name = (NSString *)[dict objectForKey:@"name"];
-    NSNumber *stu_id = (NSNumber *)[dict objectForKey:@"stu_id"];
-    NSNumber *age = (NSNumber *)[dict objectForKey:@"age"];
+    NSString *name = [dict stringForKey:@"name"];
+    NSNumber *stu_id = (NSNumber *)[dict numberForKey:@"stu_id"];
+    NSNumber *age = (NSNumber *)[dict numberForKey:@"age"];
     
     if (name != nil) {
         stu.name = name;
@@ -54,5 +51,8 @@ static void *MyClassResultKey;
         stu.age = age;
     }
 }
+
+
+
 
 @end

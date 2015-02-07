@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "NestedDataStore.h"
+#import "NestedDataStore+Help.h"
 #import "Student.h"
 
 @interface DataCoreTests : XCTestCase{
@@ -84,6 +84,15 @@
     NSLog(@"%@", stu.stu_id);
     NSLog(@"%@", results);
 
+}
+
+- (void)testAdd
+{
+    NSDictionary *dict = @{
+                           @"stu_id": @"2",
+                           @"age": @2,
+                           };
+    [nestedDataStore add:dict];
 }
 
 @end
