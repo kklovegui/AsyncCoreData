@@ -10,6 +10,7 @@
 
 typedef void(^CallBackBlock)(NSArray* result, NSError *error);
 
+
 @interface NestedDataStore (Help)
 
 - (void)add:(NSDictionary *)dict;
